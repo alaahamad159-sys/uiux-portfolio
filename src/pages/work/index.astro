@@ -1,0 +1,4 @@
+---
+import Base from '../../layouts/Base.astro';import ProjectCard from '../../components/ProjectCard.astro';import {projects} from '../../data/projects';
+---
+<Base title="Work — Alaa Ahmad"><section class="page-intro wrap"><span class="eyebrow">PORTFOLIO / SELECTED PROJECTS</span><h1>Selected <em>work.</em></h1><p>A collection of design explorations, product thinking, and problems I'm learning to solve.</p></section><section class="wrap projects-grid work-page-grid">{projects.map(p=><ProjectCard project={p}/>)}</section></Base>

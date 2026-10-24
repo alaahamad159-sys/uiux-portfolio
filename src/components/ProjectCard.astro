@@ -1,0 +1,5 @@
+---
+import type {Project} from '../data/projects';
+const {project,large=false}:{project:Project,large?:boolean}=Astro.props;
+---
+<a class:list={['project-card','reveal',large&&'large']} href={`/work/${project.slug}/`} aria-label={`View ${project.title} case study`}><div class="project-art" style={`--project-accent:${project.accent}`}><span class="art-top">{project.eyebrow}</span><div class="art-content"><span class="art-symbol">{project.icon}</span><span class="art-name">{project.title}</span><span class="art-caption">{project.description}</span></div><span class="art-bottom">Alaa Ahmad / Selected work</span><span class="art-arrow" aria-hidden="true">↗</span></div><div class="project-meta"><div><h3>{project.title}</h3><p>{project.eyebrow}</p></div><span>{project.year} ↗</span></div></a>

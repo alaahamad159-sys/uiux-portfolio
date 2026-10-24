@@ -1,1 +1,0 @@
-{"name":"alaahamad-portfolio","version":"1.0.0","type":"module","scripts":{"dev":"astro dev","build":"astro build","preview":"astro preview","check":"astro check"},"dependencies":{"astro":"^5.0.0","@astrojs/sitemap":"^3.2.0","lucide":"^0.468.0"},"devDependencies":{"typescript":"^5.6.0"}}
