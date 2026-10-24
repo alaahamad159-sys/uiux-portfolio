@@ -6,6 +6,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: 9948a12d7361ddf633458b462d3fd731
     steps:
       - name: Check out source
         uses: actions/checkout@v4
@@ -24,7 +27,4 @@ jobs:
           path: dist/
       - name: Publish to Cloudflare Pages
         if: ${{ env.CLOUDFLARE_API_TOKEN != '' }}
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: 9948a12d7361ddf633458b462d3fd731
         run: npx --yes wrangler@4 pages deploy dist --project-name alaahamad-portfolio --branch main
